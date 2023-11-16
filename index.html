@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+</head>
+<body>
+    <div class="header">
+        <h1 class="title"><a href="./index.html"></a>Online Quiz</h1>
+        <h5 class="tag-line">Give basic online quiz to test your knowledge</h5>
+    </div>
+    <div class="container-fluid" style="padding-left: 0px;">
+       
+        <div class="row">
+            <div class="col-sm-3 index">
+                <!-- <iframe src="./HTML Pages/contents.html" frameborder="0" class="contents" title="contents" height="900px"></iframe> -->
+                <h5>Web Technologies</h5>
+                    <ul>
+                        <li><button type="button" onclick="showQuestions(html)">Hyper Text Markup Language (HTML)</button></li>
+                        <li><button type="button">Cascading Style Sheet (CSS)</button></li>
+                        <li><button href="">JavaScript</button></li>
+                        <li><button href="">Bootstrap</button></li>
+                        <li><button href="">JQuery</button></li>
+                    </ul>
+                    <h5>Programming Languages</h5>
+                    <ul>
+                        <li><button href="">C Language</button></li>
+                        <li><button href="">JAVA</button></li>
+                        <li><button href="">Python</button></li>
+                        <li><button href="">C++</button></li> 
+                        <li><button href="">C#</button></li>
+                    </ul>
+
+                    <h5>JavaScript Frameworks</h5>
+                    <ul>
+                        <li><button href="">Node.JS</button></li>  
+                        <li><button>React.js</button></li>
+                        <li><button>Angular.js</button></li>
+                    </ul>
+                    
+                    <h5>Databases</h5>
+                    <ul>
+                        <li><button type="button">Structured Query Language (SQL)</button></li>
+                        <li><button type="button">PostgreSQL</button></li>
+                        <li><button type="button">Oracle</button></li>
+                    </ul>          
+            </div>
+            <div class="col-sm-9 home-content">
+                <div class="intro">
+                    <img src="./images/home.avif" alt="">
+                    <img src="./images/home-img.jpg" alt="">
+                    <h3 class="py-3">Your Gateway to India's Elite Educational Institutes</h3>
+                    <p class="py-3">Discover India's premier educational institutions, all in one place. InstiXpert simplifies your search for the best institutes, saving you time and effort. Whether you're pursuing higher education or seeking top-notch training, we've got you covered.</p>
+                </div>
+                
+                <div id="quiz-question">
+
+                </div>
+                <div id="submit-quiz">
+
+                </div>
+                <div id="result">
+                    
+                </div>
+            </div>
+        </div>
+    
+       
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
