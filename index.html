@@ -9,10 +9,52 @@
     
 </head>
 <body>
-    <div class="header">
+    <nav class="navbar fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Online Quiz</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Subject List</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" onclick="showQuestions(html,0)" data-bs-dismiss="offcanvas" aria-label="Close" href="">HTML</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" onclick="showQuestions(css,1)" data-bs-dismiss="offcanvas" aria-label="Close" href="">CSS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" onclick="showQuestions(js,2)" data-bs-dismiss="offcanvas" aria-label="Close" href="">JavaScript</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-dismiss="offcanvas" aria-label="Close" href="">Bootstrap</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-dismiss="offcanvas" aria-label="Close" href="">Progrming in C</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-dismiss="offcanvas" aria-label="Close" href="">JAVA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-dismiss="offcanvas" aria-label="Close" href="">C++</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-dismiss="offcanvas" aria-label="Close" href="">Python</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <!-- <div class="header">
         <h1 class="title"><a href="./index.html"></a>Online Quiz</h1>
         <h5 class="tag-line">Give basic online quiz to test your knowledge</h5>
-    </div>
+    </div> -->
     <div class="container-fluid" style="padding-left: 0px;">
        
         <div class="row">
@@ -20,9 +62,9 @@
                 <!-- <iframe src="./HTML Pages/contents.html" frameborder="0" class="contents" title="contents" height="900px"></iframe> -->
                 <h5>Web Technologies</h5>
                     <ul>
-                        <li><button type="button" onclick="showQuestions(html)">Hyper Text Markup Language (HTML)</button></li>
-                        <li><button type="button">Cascading Style Sheet (CSS)</button></li>
-                        <li><button href="">JavaScript</button></li>
+                        <li><button type="button" onclick="showQuestions(html,0)">Hyper Text Markup Language (HTML)</button></li>
+                        <li><button type="button" onclick="showQuestions(css,1)">Cascading Style Sheet (CSS)</button></li>
+                        <li><button href="" onclick="showQuestions(js,2)">JavaScript</button></li>
                         <li><button href="">Bootstrap</button></li>
                         <li><button href="">JQuery</button></li>
                     </ul>
@@ -50,10 +92,8 @@
                     </ul>          
             </div>
             <div class="col-sm-9 home-content">
-                <div class="intro">
-                    <img src="./images/home.avif" alt="">
-                    <img src="./images/home-img.jpg" alt="">
-                    <h3 class="py-3">Your Gateway to India's Elite Educational Institutes</h3>
+                <div id="intro">
+                    <h3 class="py-3">Test Your Basic knowledge in Technical Skills</h3>
                     <p class="py-3">Discover India's premier educational institutions, all in one place. InstiXpert simplifies your search for the best institutes, saving you time and effort. Whether you're pursuing higher education or seeking top-notch training, we've got you covered.</p>
                 </div>
                 
@@ -72,5 +112,6 @@
        
     </div>
     <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.js"></script>
 </body>
 </html>
