@@ -6,6 +6,7 @@ var isHomePage = true;
 var isQuizTest = false;
 var isResult = false;
 var currentSubject;
+var currentSubCode;
 var sub = ["HTML 5","CSS 3","JavaScript","Bootstrap"];
 
 function showQuestions(subject,sub_code) {
@@ -19,12 +20,15 @@ function showQuestions(subject,sub_code) {
     }
      
     currentSubject = subject;
+    currentSubCode = sub_code;
     wipeOut(document.getElementById("quiz-question"));
     wipeOut(document.getElementById("submit-quiz"));
 
-    document.getElementById("quiz-question").insertAdjacentHTML('beforeend',"<h2>"+sub[sub_code]+"</h2>")
+    var quiz = document.getElementById("quiz-question");
+    quiz.classList.add("px-4");
+    quiz.classList.add("py-4");
+    quiz.insertAdjacentHTML('beforeend',"<h2>"+sub[sub_code]+"</h2>")
     for(var i=0;i<subject.length;i++) {
-        var quiz = document.getElementById("quiz-question");
         quiz.insertAdjacentHTML('beforeend', "<div class=\"question\"></div><div class=\"answer\"><form action=\"\"><div class=\"opt\"><input type=\"radio\" name=\"q"+(i+1)+"\" id=\"q"+(i+1)+"a\"><label for=\"q"+(i+1)+"a\"></label></div><div class=\"opt\"><input type=\"radio\" name=\"q"+(i+1)+"\" id=\"q"+(i+1)+"b\"><label for=\"q"+(i+1)+"b\"></label></div><div class=\"opt\"><input type=\"radio\" name=\"q"+(i+1)+"\" id=\"q"+(i+1)+"c\"><label for=\"q"+(i+1)+"c\"></label></div><div class=\"opt\"><input type=\"radio\" name=\"q"+(i+1)+"\" id=\"q"+(i+1)+"d\"><label for=\"q"+(i+1)+"d\"></label></div></form></div>"); 
     }
     document.getElementById("submit-quiz").insertAdjacentHTML('beforeend', "<button id=\"submit\" type=\"button\">Submit Test</button>"); 
@@ -36,14 +40,14 @@ function showQuestions(subject,sub_code) {
         }
     }
     document.getElementById("submit-quiz").addEventListener("click",function() {
-        evaluateResult(currentSubject);
+        evaluateResult(currentSubject,currentSubCode);
     });  
     if(isResult == true) {
         wipeOut(document.getElementById("result"));
     }
 }
 
-function evaluateResult(subject) {
+function evaluateResult(subject,subCode) {
     var attemtedQues;
     for (let i = 0; i < subject.length; i++) {
         attemtedQues = document.getElementsByName("q"+(i+1));
@@ -64,7 +68,7 @@ function evaluateResult(subject) {
     }
     wipeOut(document.getElementById("quiz-question"));
     wipeOut(document.getElementById("submit-quiz"));
-    document.getElementById("result").insertAdjacentHTML('beforeend', "<div><p>Your Score : "+result+" / 10</p><p>Attempted Questions : "+attemtedQuestions+"</p><p>Correct Answers : "+correctAns+"</p><p>Wrong Answers : "+wrongAns+"</p></div>");
+    document.getElementById("result").insertAdjacentHTML('beforeend', "<div><p>Your Score : "+result+" / 10</p><p>Attempted Questions : "+attemtedQuestions+"</p><p>Correct Answers : "+correctAns+"</p><p>Wrong Answers : "+wrongAns+"</p><p>Subject : "+sub[subCode]+"</p></div>");
     isResult = true;
 }
 
@@ -90,7 +94,7 @@ var html = [{ques: "What does HTML stand for?", opt: ["Hyper Text Markup Languag
 
 var css = [{ques: "What does CSS stand for?", opt: ["Computer Style Sheets"," Creative Style Sheets","Cascading Style Sheets","Colorful Style Sheets"], ans : 2},
            {ques: "Which CSS property is used to set the text color of an element?", opt: ["text-color","color","font-color","text-style"], ans : 1},
-           {ques: "How can you include comments in CSS?", opt: [" /* Comment */","// Comment //","<!-- Comment -->"," % Comment %"], ans : 0},
+           {ques: "How can you include comments in CSS?", opt: [" /* Comment */","// Comment //","&lt;!-- Comment --&gt;"," % Comment %"], ans : 0},
            {ques: "Which CSS property is used to control the space between elements' border and content?", opt: ["padding","margin","spacing","border-spacing"], ans : 0},
            {ques: "In CSS, what does the \"float\" property do?", opt: ["Aligns text to the right","Moves an element to the right or left, allowing text to flow around it","Changes the transparency of an element"," Floats the element above other elements"], ans : 1},
            {ques: "What is the purpose of the CSS \"box-sizing\" property?", opt: ["Defines the size of a box","Adjusts the spacing between elements","Specifies the rendering mode of an element"," Controls how the total width and height of an element is calculated"], ans : 3},
