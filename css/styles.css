@@ -160,11 +160,7 @@ button:hover {
 .opt input {
     height: 16px;
     width: 16px;
-    
-}
-
-.opt input:checked {
-    background-color: coral;
+    accent-color: rgb(37, 82, 37);
 }
 
 .opt label {
@@ -187,6 +183,10 @@ button:hover {
     .navbar-toggler {
         background-color: #ffffff;
         visibility: visible;
+    }
+
+    #intro {
+        padding: 100px 50px;
     }
 }
 

@@ -115,3 +115,15 @@ var js = [{ques: "What is JavaScript primarily used for?", opt: ["Styling web pa
           {ques: "What does the \"this\" keyword refer to in JavaScript?", opt: ["The current HTML document","The global window object","The current function's execution context","The parent element of an element"], ans : 2},
           {ques: "Which built-in method can be used to sort an array in JavaScript?", opt: ["sort()","order()","arrange()","organize()"], ans : 0},
         ];
+
+var bs = [{ques: "What is Bootstrap?",opt: ["A programming language","A front-end framework","A database management system","A server-side scripting language"],ans: 1},
+          {ques: "Which CSS preprocessor is used by Bootstrap?",opt: ["Sass","Less","Stylus","Both A and B"],ans: 3},
+          {ques: "What is the purpose of the Bootstrap grid system?",opt: ["To create responsive layouts","To define color schemes","To manage server-side logic","To style typography"],ans: 0},
+          {ques: "Which class is used to create a responsive navigation bar in Bootstrap?",opt: [" .navbar-default",".nav-bar",".navbar-responsive",".responsive-navbar"],ans: 0},
+          {ques: "In Bootstrap, which class is used to create a button group?",opt: [" .button-group"," .btn-group",".button-container",".btn-container"],ans: 1},
+          {ques: "What does the \"container\" class in Bootstrap do?",opt: ["Adds a border around an element","Centers content with fixed-width responsiveness"," Defines a background color for an element"," Sets font styles for text"],ans: 1},
+          {ques: "Which class is used for creating responsive, fixed-width containers in Bootstrap?",opt: [" .container-fixed"," .container-fluid",".container-responsive",".container-fixed-width"],ans: 1},
+          {ques: "What is the purpose of the Bootstrap \"glyphicons\" class?",opt: ["To style text","To add small, vector icons","To create form elements","To define button styles"],ans: 1},
+          {ques: "Which utility class is used for hiding elements on different screen sizes in Bootstrap?",opt: [".hidden-xs",".hide-mobile",".invisible-md",".screen-hidden"],ans: 0},
+          {ques: "What is the purpose of the \"Jumbotron\" component in Bootstrap?",opt: ["To create animated buttons","To display prominent headings","To define a navigation bar","To style form elements"],ans: 1}       
+        ];
