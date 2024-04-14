@@ -79,6 +79,11 @@ function wipeOut(parent) {
 }
 
 
+function availableSoon() {
+    window.alert("The quiz for this subject will be available soon...");
+}
+
+
 
 var html = [{ques: "What does HTML stand for?", opt: ["Hyper Text Markup Language","High-level Text Management Language","Hyperlink and Text Management Language","HyperTransfer Markup Language"],ans : 0},
             {ques: "Which HTML tag is used to create a hyperlink?", opt: ["&lt;link&gt;","&lt;a&gt;","&lt;hyperlink&gt;","&lt;url&gt;"], ans : 1},
